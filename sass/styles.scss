@@ -1,0 +1,459 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+// Added fonts
+@font-face {
+  font-family: 'ForalPro-Regular';
+  src: url('../fonts/elicon/ForalPro-Regular.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/elicon/ForalPro-Regular.otf') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/elicon/ForalPro-Regular.otf') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/elicon/ForalPro-Regular.otf') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/elicon/ForalPro-Regular.otf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/elicon/ForalPro-Regular.otf') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'ForalPro-Bold';
+  src: url('../fonts/elicon/ForalPro-Bold.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/elicon/ForalPro-Bold.otf') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/elicon/ForalPro-Bold.otf') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/elicon/ForalPro-Bold.otf') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/elicon/ForalPro-Bold.otf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/elicon/ForalPro-Bold.otf') format('svg'); /* Legacy iOS */
+}
+
+//define variables here so you can use it later -ramy
+//here i should make all my css
+//define varaibles
+$header-footer: #24262a;
+$brand-primary: #2d3135;
+$brand-secondary: #f2f1ec;
+$inner-circle: #24262a;
+$outer-circle: #181818;
+$white-text: #ffffff;
+$modal-color: #24262a;
+//Font variables
+$ForalPro-Regular : ForalPro-Regular;
+$ForalPro-Bold :ForalPro-Bold;
+
+
+@media screen and (min-width: $container-desktop) {
+  .container {
+    width: $container-desktop;
+  }
+}
+.ForalProRegular{
+  font-family:$ForalPro-Regular;
+}
+//Top navigation
+.navbar-brand {
+  width:100px;
+  padding-left:0;
+}
+.navbar-brand img {
+  //  width:100%;
+  width:150px;
+}
+.editedNavbarToggle{
+  border:0;
+}
+.editedNavbarToggle:focus {
+  background-color: transparent!important;
+}
+.editedNavbarToggle:hover {
+  background-color: transparent!important;
+}
+.editedNavbar {
+  margin-top: 0.8em;
+  font-family: $ForalPro-Bold;
+  font-size:16pt;
+}
+
+.editedNavbar li a {
+  color:$white-text!important;
+}
+
+@media only screen and (min-width: 768px){
+  .editedNavbar {
+    float:right;
+  }
+
+}
+
+//Border for under the text
+.border{
+  background-color:$brand-primary;
+  display:block;
+  width:40px;
+  height:4px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+//White border for under the text
+.borderWhite{
+  @extend .border;
+  background-color: #fff;
+}
+//First section
+.firstSection{
+  background-color: $brand-primary;
+  color:white;
+}
+.firstSection h1 {
+  padding-top: 130px;
+  padding-bottom:60px;
+//  font-size:60pt;
+  font-size:40pt;
+}
+//Second section
+.secondSection{
+  background-color: $brand-secondary;
+  color:$brand-primary;
+  padding-bottom: 80px;
+}
+.secondSection h1{
+  padding-top:80px;
+  font-family: $ForalPro-Regular;
+//  font-size:48pt;
+  font-size:40pt;
+}
+.secondSection h4{
+  font-family: $ForalPro-Bold;
+//  font-size:24pt;
+  font-size:18pt;
+}
+.secondSection p{
+  font-family: Arial;
+//  font-size:16pt;
+  font-size:13pt;
+}
+
+.circle {
+  position: relative;
+  background-color: #24262a;
+//  border: 5px solid #181818;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  /* margin-left: 25%; */
+  display: inline-block;
+}
+.circle:hover{
+  border: 5px solid #181818;
+}
+.circle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px; /* Half the width */
+  margin-left: -25px; /* Half the width */
+}
+//Third section
+.thirdSection{
+  background-color: $brand-primary;
+  color:white;
+}
+.thirdSection h1 {
+  padding-top:80px;
+  font-family: $ForalPro-Regular;
+//  font-size:48pt;
+  font-size:40pt;
+}
+.thirdSection h3 {
+  margin-bottom: 40px;
+  font-family: $ForalPro-Regular;
+//  font-size:24pt;
+  font-size:20pt;
+}
+.thirdSection p{
+  font-family: Arial;
+//  font-size:16pt;
+  font-size:14pt;
+}
+.thirdSection img {
+  padding-top:80px;
+  padding-bottom:120px;
+}
+//Fourth section
+.fourthSection{
+  background-color: $brand-secondary;
+  color:$brand-primary;
+  padding-bottom:120px;
+}
+.fourthSection h1{
+  font-family: $ForalPro-Regular;
+//  font-size:48pt;
+  font-size:40pt;
+}
+.fourthSection h3{
+  margin-bottom: 40px;
+  font-family:$ForalPro-Regular;
+//  font-size:24pt;
+  font-size:20pt;
+}
+.fourthSection p {
+  font-family: Arial;
+//  font-size:16pt;
+  font-size:14pt;
+}
+.fourthSectionImg{
+  padding-top: 80px;
+  padding-bottom:40px;
+}
+.fourthSectionImg img {
+  width:100%;
+}
+
+//Fifth section
+.fifthSection{
+  background-color: $brand-primary;
+  color:white;
+}
+.fifthSection h1 {
+  padding-top: 80px;
+  font-family: $ForalPro-Regular;
+//  font-size:48pt;
+  font-size:40pt;
+}
+.fifthSection h3 {
+  margin-bottom: 40px;
+  font-family: $ForalPro-Regular;
+//  font-size:24pt;
+  font-size:20pt;
+}
+.fifthSection p {
+  font-family: Arial;
+//  font-size:16pt;
+  font-size:14pt;
+}
+.fifthSection img {
+  padding-top:80px;
+  padding-bottom:120px;
+}
+
+
+//Sixth section
+.sixthSection{
+  background-color: $brand-secondary;
+  color:$brand-primary;
+  padding-bottom: 120px;
+}
+.sixthSection h1 {
+  padding-top: 80px;
+  font-family: $ForalPro-Regular;
+//  font-size:48pt;
+  font-size:40pt;
+}
+.sixthSection h3 {
+  margin-bottom: 40px;
+  font-family: $ForalPro-Regular;
+//  font-size:24pt;
+  font-size:20pt;
+}
+
+.sixthSection p {
+  font-family: Arial;
+//  font-size:16pt;
+  font-size:14pt;
+}
+.avatarCircle{
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+}
+
+//Seventh section
+.seventhSection{
+  background-color: $brand-primary;
+  color:white;
+  padding-bottom: 120px;
+}
+.seventhSection h3{
+  padding-top: 80px;
+  margin-bottom: 40px;
+  font-family: $ForalPro-Regular;
+//  font-size:30pt;
+  font-size:26pt;
+}
+.firstUL{
+  list-style:none;
+  padding-left:0;
+  font-family: Arial;
+//  font-size:16pt;
+  font-size:14pt;
+}
+.firstUL li:first-child{
+  color: #79bc3b;
+}
+
+.footer{
+  background-color: $header-footer;
+  color:$brand-secondary;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size:12pt;
+}
+
+.copyrightEdited{
+  color:#aaaaab;
+}
+
+@media only screen and (max-width: 768px){
+  .footerHorizontalLine{
+    margin: 0 0 30px 0;
+    height: 3px;
+    width: 35px;
+    background-color: white;
+  }
+  .seventhSection h3 {
+    margin-bottom: 0;
+  }
+  .editedListMobile li {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .copyrightEdited{
+    text-align:right;
+  }
+
+}
+
+// Mobile view
+@media only screen and (max-width: 768px){
+
+  .firstSection h1 {
+    padding-top: 80px;
+    padding-bottom:40px;
+    font-size:30pt;
+  }
+  //Second section
+
+  .secondSection h1{
+    padding-top:20px;
+    font-size:30pt;
+  }
+  .secondSection h4{
+    font-size:18pt;
+  }
+  .secondSection p{
+    font-size:13pt;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 50px;
+  }
+
+  //Third section
+
+  .thirdSection h1 {
+    padding-top:20px;
+    font-size:30pt;
+  }
+  .thirdSection h3 {
+    font-size:18pt;
+  }
+
+  .thirdSection img {
+    padding-top:60px;
+    padding-bottom:80px;
+  }
+  //Fourth section
+  .fourthSection{
+    padding-bottom:80px;
+  }
+  .fourthSection h1{
+    font-size:30pt;
+  }
+  .fourthSection h3{
+    font-size:18pt;
+  }
+  .fourthSection p {
+    font-size:13pt;
+  }
+
+  //Fifth section
+
+  .fifthSection h1 {
+    padding-top: 20px;
+    font-size:20pt;
+  }
+  .fifthSection h3 {
+    font-size:18pt;
+  }
+  .fifthSection p {
+    font-size:13pt;
+  }
+
+
+  //Sixth section
+  .sixthSection{
+    padding-bottom: 80px;
+  }
+  .sixthSection h1 {
+    padding-top: 20px;
+    font-size:30pt;
+  }
+  .sixthSection h3 {
+    font-size:18pt;
+  }
+
+  .sixthSection p {
+    font-size:13 pt;
+  }
+  .avatarCircle{
+    margin-top:60px;
+  }
+
+  //Seventh section
+  .seventhSection{
+    padding-bottom: 80px;
+  }
+  .seventhSection h3{
+    padding-top: 20px;
+    font-size: 20pt;
+  }
+  .firstUL{
+    font-size:13pt;
+  }
+
+  .footer{
+    padding-top:40px;
+    padding-bottom:10px;
+    font-size:11pt;
+  }
+
+}
+
+// Modal CSS
+.modalCss {
+  background-color: $modal-color;
+  color:$white-text;
+}
+.modalCss h1 {
+  font-family: $ForalPro-Regular;
+//  font-size:48pt;
+  font-size:40pt;
+}
+.modalCss p {
+  font-family: Arial;
+//  font-size:16pt;
+  font-size:13pt;
+}
+
+.stretchImg img {
+  width:100%;
+}
+.leftImg{
+  padding-right: 0;
+  padding-bottom: 15px;
+}
+.threeImg img{
+  padding-bottom:15px;
+}
